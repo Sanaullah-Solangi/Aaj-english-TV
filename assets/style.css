@@ -1,0 +1,689 @@
+/**=============== Base css style ===============*/
+
+@font-face {
+  font-family: "FjallaOne";
+  src: url("./font/FjallaOne-Regular.ttf");
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "FjallaOne", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-color2: rgb(85, 76, 76);
+  --text-color: rgb(170, 107, 150);
+  --popular-color: rgb(75, 85, 114);
+  --link-hover: rgb(220, 117, 43);
+  --tag-color: rgb(2, 193, 197);
+  --light-bg: rgb(226, 238, 226);
+  --light-br: rgb(238, 238, 238);
+  --logo-color: rgb(13, 128, 131);
+}
+
+/**=============== Reausable css style ===============*/
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-wide-three-cols {
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+.grid-wider-three-cols {
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 5rem;
+}
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+h2,
+.slider-content .slider-description p,
+.recap-item p,
+.life-heading,
+.life-description,
+.opinion-heading p {
+  font-family: "Roboto Serif";
+}
+
+a {
+  color: #000;
+}
+
+.header-item,
+.date,
+/* .navbar, */
+.navbar-container,
+.story-tag,
+.story-box .story-detail,
+.main-part,
+.main-part-heading,
+.popular-list a::before,
+.slider-content,
+.recap-heading,
+.sports-box .sports-detail,
+.recap-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dir-col {
+  flex-direction: column;
+}
+
+.header-item,
+.recap-item,
+.main-part-1 {
+  flex-direction: column;
+}
+.header-item,
+.date {
+  height: 100%;
+}
+
+p,
+.header-item > p a {
+  color: var(--text-color);
+  font-size: 1.8rem;
+}
+p,
+.header-item > p a,
+.opinion-tag,
+.footer-links span {
+  text-transform: capitalize;
+}
+
+.navbar a,
+.story-main-heading,
+.story-tag,
+.sports-tag,
+.recommended-news-heading,
+.popular-heading,
+.recap-heading,
+.life-main-heading,
+.all-container-heading {
+  text-transform: uppercase;
+}
+.underline,
+.underline ~ p {
+  font-style: italic;
+}
+
+.date .english p,
+.underline,
+.navbar a,
+.story-tag span:nth-of-type(1),
+.story-box,
+.sports-box,
+.recommended-news,
+.popular-list a,
+.recap,
+.footer-links span {
+  position: relative;
+}
+
+.date .english p:after,
+.underline::after,
+.navbar a::after,
+.story-tag span:nth-of-type(1)::after,
+.story-box::after,
+.recommended-news-heading,
+.popular-list a::after,
+.popular-list a::before,
+.sports-box::after,
+.recap-heading,
+.footer-links span::after {
+  content: "";
+  position: absolute;
+  background-color: var(--text-color);
+}
+
+.navbar a {
+  transition: all 0.2s linear;
+  -webkit-transition: ;
+  -moz-transition: ;
+  -ms-transition: ;
+  -o-transition: ;
+}
+.navbar a {
+  color: #000;
+  font-weight: bold;
+}
+
+.story-main-heading,
+.recommended-news,
+.recommended-news-heading,
+.popular-box {
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+.popular-list a::before,
+.slider-content .slider-img img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.dbl-border {
+  border-top: 5px double #ccc;
+}
+
+.underline::after,
+.story-box::after,
+.sports-box::after,
+.popular-list a::after,
+.recap-heading {
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+/**=============== header css style ===============*/
+
+.header {
+  padding: 0 10rem 1rem;
+}
+.header-item .logo {
+  height: 13rem;
+}
+.header-item .logo img {
+  width: 100%;
+  height: 100%;
+}
+.date {
+  margin-top: 0.5rem;
+}
+
+.date p {
+  font-size: 1.4rem;
+  padding: 0 1rem;
+}
+
+.date .english p::after,
+.navbar a::after,
+.story-tag span:nth-of-type(1)::after,
+.footer-links span::after {
+  top: 50%;
+  right: 0rem;
+  width: 0.1rem;
+  height: 80%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.underline {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.underline::after,
+.story-box::after,
+.sports-box::after,
+.popular-list a::after {
+  bottom: 0%;
+  width: 50%;
+  height: 0.1rem;
+}
+
+.header-item .color a {
+  color: var(--link-hover);
+}
+
+/**=============== navigation css style ===============*/
+
+.navbar-container {
+  border: 1px solid;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.navbar-content {
+  overflow: auto;
+}
+.navbar {
+  font-size: 2rem;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  white-space: nowrap;
+}
+
+.navbar-content::-webkit-scrollbar {
+  display: none;
+}
+.navbar a {
+  padding-inline: 1rem;
+  letter-spacing: 1.5px;
+}
+.navbar a:nth-of-type(7) {
+  position: static;
+}
+
+.navbar a:hover {
+  color: var(--link-hover);
+}
+
+/**=============== first main seciton css style ===============*/
+
+.main-container,
+.section {
+  margin: auto;
+  width: 95%;
+  padding-block: 2rem;
+}
+/*!================== block one & two top stories ==============*/
+
+.story-box,
+.sports-box {
+  margin-bottom: 5rem;
+}
+.story-box::after,
+.sports-box::after,
+.popular-list a::after {
+  bottom: -1.5rem;
+  width: 100%;
+}
+.story-main-heading,
+.recommended-news-heading {
+  font-size: 1.8rem;
+  background-color: #000;
+  width: fit-content;
+  color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.story-tag,
+.sports.tag {
+  width: fit-content;
+  gap: 0.5rem;
+}
+.story-tag span,
+.sports-tag span {
+  font-size: 1.3rem;
+  padding-right: 1rem;
+}
+
+.story-tag span:nth-of-type(2),
+.sports-tag span {
+  color: var(--tag-color);
+}
+.story-box .story-heading,
+.sports-box .sports-heading {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.story-box .story-detail,
+.sports-box .sports-detail {
+  align-items: start;
+  width: 100%;
+}
+.story-box .story-detail p,
+.sports-box .sports-detail p {
+  font-size: 1.6rem;
+  /* float: left; */
+  width: 100%;
+}
+.story-detail .story-img,
+.sports-detail .sports-img {
+  width: 20rem;
+}
+.story-detail .story-img img,
+.sports-detail .sports-img img {
+  width: 15rem;
+  height: 10rem;
+  float: right;
+}
+/*!================== block three main part ==============*/
+
+.main-part-1 {
+  justify-content: start;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+}
+
+.main-part-img,
+.main-part-img img {
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.main-part-heading {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+  background-color: var(--light-bg);
+}
+/*?================== block three recommended news ==============*/
+
+.recommended-news {
+  background-color: #fff;
+  margin-top: 10rem;
+  padding: 3rem 2rem;
+  border: 1px solid black;
+}
+.news-img img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.recommended-news-heading {
+  top: -4.3rem;
+  left: 0.5rem;
+  z-index: -1;
+}
+.recommended-news-heading p {
+  color: #fff;
+  font-size: 3rem;
+}
+
+/*!================== block four main slider ==============*/
+
+.main-part-2 {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+
+.slider-content {
+  padding: 5rem;
+  gap: 0.5rem;
+  border-block: 1px solid var(--text-color);
+}
+.slider-content .slider-img {
+  width: 18rem;
+  height: 8rem;
+}
+.slider-content .slider-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-content .slider-description p {
+  text-align: center;
+  font-size: 2.8rem;
+}
+/*!================== block four recap ==============*/
+.recap {
+  margin-top: 10rem;
+  padding: 6rem 3rem 4rem;
+}
+.recap .recap-heading {
+  width: fit-content;
+  font-size: 2.4rem;
+  gap: 1rem;
+  background-color: transparent;
+  top: -2rem;
+  background-color: #fff;
+  padding-inline: 2rem;
+}
+.recap-heading span:first-child {
+  color: var(--main-color2);
+}
+.recap-heading span:last-child {
+  color: var(--logo-color);
+}
+
+.recap-heading img {
+  width: 2rem;
+}
+.recap-item {
+  gap: 1rem;
+}
+.recap-item p {
+  font-size: 1.5rem;
+}
+.recap-item img {
+  width: 100%;
+}
+/*!================== block five popupar news ==============*/
+
+.popular {
+  grid-column: 3 / -1;
+  grid-row: 1 / -1;
+}
+
+.popular-box {
+  border: 1px solid var(--link-hover);
+}
+.popular-box .popular-heading {
+  background-color: var(--light-bg);
+  font-size: 2.4rem;
+  letter-spacing: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.popular-list {
+  padding-bottom: 2rem;
+}
+
+.popular-list a::after {
+  bottom: 0%;
+  background-color: var(--light-br);
+}
+
+.popular-list a {
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+  line-height: 2.6rem;
+  letter-spacing: 1px;
+}
+
+.popular-list a::before {
+  content: "1";
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  top: 1rem;
+  left: 0.5rem;
+  background-color: var(--light-bg);
+}
+
+.popular-list a:nth-of-type(2)::before {
+  content: "2";
+}
+
+.popular-list a:nth-of-type(3)::before {
+  content: "3";
+}
+
+.popular-list a:nth-of-type(4)::before {
+  content: "4";
+}
+
+.popular-list a:nth-of-type(5)::before {
+  content: "5";
+}
+
+.popular-list a:nth-of-type(6)::before {
+  content: "6";
+}
+
+.popular-list a:nth-of-type(7)::before {
+  content: "7";
+}
+
+.popular-list a:nth-of-type(8)::before {
+  content: "8";
+}
+
+.popular-list a:nth-of-type(9)::before {
+  content: "9";
+}
+
+.popular-list a:nth-of-type(10)::before {
+  content: "10";
+}
+
+.popular-list a:nth-of-type(11)::before {
+  content: "11";
+}
+.popular-list a:last-child::after {
+  width: 0%;
+}
+/*!================== block six life & style ==============*/
+.life-main-heading h2 {
+  font-size: 3.2rem;
+  font-family: "FjallaOne", sans-serif;
+  padding-block: 1rem;
+}
+
+.life-content .life-img {
+  width: 100%;
+}
+.life-content .life-img img {
+  width: 100%;
+  height: 100%;
+}
+.life-item:nth-of-type(2) .life-content .life-img,
+.life-item:nth-of-type(2) .life-content .life-img img {
+  height: auto;
+}
+
+.life-content .life-heading {
+  font-size: 1.6rem;
+  text-align: justify;
+  font-weight: bold;
+  margin: 2rem 0 1rem;
+}
+.life-description {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.style {
+  margin-top: 2rem;
+}
+.all-container-heading {
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.all-container-heading h2 {
+  font-family: "FjallaOne";
+}
+
+:is(.sports, .business, .world) h2 {
+  font-size: 3.2rem;
+}
+.sports-box::after {
+  background-color: var(--light-bg);
+}
+
+.opinion .all-container-heading h2 {
+  font-size: 3.2rem;
+}
+
+.opinion-container {
+  gap: 3rem;
+}
+
+.opinion-img img {
+  width: 100%;
+}
+
+.opinion-content {
+  text-align: center;
+}
+.opinion-heading p {
+  color: #000;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+.opinion-tag {
+  font-size: 1.4rem;
+  gap: 1rem;
+}
+.opinion-tag span:last-child {
+  color: #000;
+}
+.opinion-tag span:first-child {
+  padding: 1rem;
+}
+
+.footer {
+  border-top: 1px solid var(--text-color);
+  padding: 2rem 5rem 10rem;
+  gap: 0.5rem;
+}
+
+.footer-item-one p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+.footer-item {
+  border: 1px solid;
+}
+
+.footer .social-links {
+  gap: 1rem;
+  width: fit-content;
+}
+.footer .social-links img {
+  width: 3rem;
+}
+
+.footer-item-two {
+  grid-column: 2 / -1;
+  grid-row: 1 / 3;
+  align-items: end;
+  height: 100%;
+}
+
+.footer p {
+  grid-column: 1 / 2;
+}
+
+.footer-links {
+  width: 100%;
+  font-size: 1.3rem;
+  white-space: no-wrap;
+  overflow: hidden;
+}
+
+.footer-links span {
+  padding-inline: 1rem;
+  white-space: no-wrap;
+}
+.footer-links span:first-child {
+  padding-left: 0;
+}
+.footer-links span:last-child::after {
+  height: 0%;
+}

@@ -1,0 +1,166 @@
+@media (width <= 1280px) {
+  .main-container,
+  .section {
+    width: 950px;
+  }
+  .main-part-2 {
+    margin-top: -15rem;
+  }
+}
+
+@media (width <= 950px) {
+  html {
+    font-size: 55.2%;
+  }
+  .main-container,
+  .section {
+    width: 85%;
+  }
+  .grid-wide-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-wider-three-cols {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+  .main-part-1 {
+    justify-content: start;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+  .main-part-2 {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+    margin-top: 10rem;
+  }
+  .popular {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    margin-top: -7rem;
+  }
+  :is(.recap, .sports-business) .grid-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sports-business .grid {
+    column-gap: 5rem;
+  }
+  .life-style .grid-four-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sports-business .world {
+    grid-column: 1 / -1;
+  }
+  .sports-box,
+  .sports-box .sports-detail {
+    width: 100%;
+  }
+  .opinion .grid-three-cols {
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    row-gap: 2rem;
+  }
+  .footer-item-two {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    height: 100%;
+  }
+
+  .footer p {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+  .footer-links {
+    justify-content: start;
+  }
+}
+
+@media (width <= 850px) {
+  .header {
+    padding: 0 5rem 1rem;
+  }
+  .popular {
+    margin-top: -15rem;
+  }
+}
+
+@media (width <= 750px) {
+  .header {
+    padding: 0 1rem 1rem;
+  }
+  .header-container {
+    gap: 0rem;
+  }
+  .header .header-item:nth-of-type(2) .date {
+    display: none;
+  }
+
+  .grid-four-cols,
+  .grid-two-cols,
+  .grid-wide-three-cols,
+  .grid-wider-three-cols,
+  :is(.recap, .sports-business) .grid-three-cols,
+  .life-style .grid-four-cols,
+  .opinion .grid-three-cols {
+    grid-template-columns: 1fr;
+  }
+  .main-part-1 {
+    justify-content: start;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  .top-stories-1 {
+    grid-row: 2 / 3;
+  }
+  .top-stories-2 {
+    grid-row: 3 / 4;
+  }
+  .main-part-2 {
+    grid-column: 1 / -1;
+    grid-row: 6;
+    margin-top: 10rem;
+  }
+  .popular {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    margin-top: -7rem;
+  }
+  .popular {
+    margin-top: 4rem;
+  }
+  /* .footer {
+    padding: 2rem 1rem 10rem;
+    row-gap: 0.5rem;
+  } */
+  .footer-links span {
+    padding-inline: 0.5rem;
+  }
+}
+@media (width <= 600px) {
+  .footer {
+    padding: 2rem 2rem 10rem;
+    row-gap: 0.5rem;
+  }
+}
+@media (width <= 500px) {
+  html {
+    font-size: 50.5%;
+  }
+
+  .footer {
+    padding: 2rem 1rem 10rem;
+    row-gap: 1rem;
+  }
+}
+
+@media (width <= 480px) {
+}
+@media (width <= 450px) {
+  html {
+    font-size: 45.5%;
+  }
+  .footer-links :is(span:nth-child(7), span:nth-child()) {
+    display: none;
+  }
+}
